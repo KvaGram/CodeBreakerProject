@@ -65,7 +65,7 @@ function getResults(inputGuess)
 			results.innerHTML += RESULT_GLYPHS[0];
 			numCorrect++;
 		}
-		else if(ans_str.contains(inputGuess.charAt(i)))
+		else if(ans_str.includes(inputGuess.charAt(i)))
 			results.innerHTML += RESULT_GLYPHS[1];
 		else
 			results.innerHTML += RESULT_GLYPHS[2];
