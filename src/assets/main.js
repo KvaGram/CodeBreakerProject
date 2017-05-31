@@ -89,3 +89,26 @@ function getResults(inputGuess)
 	else
 		return false;
 }
+
+function showAnswer(victory)
+{
+	let code = document.getElementById("code");
+	code.innerHTML = answer.value;
+	
+	if(victory)
+	{
+		code.addClass("success");
+	}
+	else
+	{
+		code.addClass("failure");	
+	}
+	showAnswer(victory);
+}
+function showReplay()
+{
+	let guessingDiv = document.getElementById("guessing-div");
+	let replayDiv = document.getElementById("replay-div");
+	guessingDiv.style.display = "none";
+	replayDiv.style.display = "block";
+}
