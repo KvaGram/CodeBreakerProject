@@ -68,16 +68,17 @@ function getResults(inputGuess)
 	let results = document.getElementById('results');
 	let ans_str = answer.value;
 	let numCorrect = 0;
+	let gss_str = inputGuess.toString();
 	results.innerHTML +=
 	'<div class="row"><span class="col-md-6">' + inputGuess + '</span><div class="col-md-6">';
 	for (var i = 0; i < STR_LENGTH; i++)
 	{
-		if(ans_str.charAt(i) == inputGuess.charAt(i))
+		if(ans_str.charAt(i) == gss_str.charAt(i))
 		{
 			results.innerHTML += RESULT_GLYPHS[0];
 			numCorrect++;
 		}
-		else if(ans_str.includes(inputGuess.charAt(i)))
+		else if(ans_str.includes(gss_str.charAt(i)))
 			results.innerHTML += RESULT_GLYPHS[1];
 		else
 			results.innerHTML += RESULT_GLYPHS[2];
