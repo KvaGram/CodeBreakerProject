@@ -100,11 +100,11 @@ function showAnswer(victory)
 	
 	if(victory)
 	{
-		code.addClass("success");
+		$(code).addClass("success");
 	}
 	else
 	{
-		code.addClass("failure");	
+		$(code).addClass("failure");	
 	}
 	showAnswer(victory);
 }
