@@ -60,12 +60,12 @@ function getResults(inputGuess)
 	'<div class="row"><span class="col-md-6">' + inputGuess + '</span><div class="col-md-6">';
 	for (var i = 0; i < STR_LENGTH; i++)
 	{
-		if(ans_str.char_at(i) == inputGuess.char_at(i))
+		if(ans_str.charAt(i) == inputGuess.charAt(i))
 		{
 			results.innerHTML += RESULT_GLYPHS[0];
 			numCorrect++;
 		}
-		else if(ans_str.contains(inputGuess.char_at(i)))
+		else if(ans_str.contains(inputGuess.charAt(i)))
 			results.innerHTML += RESULT_GLYPHS[1];
 		else
 			results.innerHTML += RESULT_GLYPHS[2];
