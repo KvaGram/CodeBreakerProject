@@ -33,13 +33,14 @@ function setHiddenFields()
 	answer.value = ans_str;
 	attempt.value = 0;
 }
-function setMessage(message)
+function setMessage(msg)
 {
-	message.innerHTML = "";
+	let message = document.getElementById("message");
+	message.innerHTML = msg;
 }
 function validateInput(inputGuess)
 {
-	if(guess.length == 4)
+	if(inputGuess.length == 4)
 		return true;
 	setMessage("Guesses must be exactly 4 characters long.");
 	return false;
@@ -52,7 +53,7 @@ const RESULT_GLYPHS =
 ];
 function getResults(inputGuess)
 {
-	let results = getElementById('results');
+	let results = document.getElementById('results');
 	let ans_str = answer.value;
 	let numCorrect = 0;
 	results.innerHTML +=
